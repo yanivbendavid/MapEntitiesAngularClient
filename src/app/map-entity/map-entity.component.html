@@ -1,0 +1,22 @@
+<form>
+  <div style="display: table; margin-top: 10px;">
+    <div class="tableRow">
+      <mat-form-field class="example-form-field">
+        <input matInput type="text" placeholder="Name:" autocomplete="off" />
+      </mat-form-field>
+    </div>
+    <div class="tableRow">
+      <mat-form-field class="example-form-field">
+        <input matInput type="text" placeholder="X:" autocomplete="off" />
+      </mat-form-field>
+    </div>
+    <div class="tableRow">
+      <mat-form-field class="example-form-field">
+        <input matInput type="text" placeholder="Y:" autocomplete="off" />
+      </mat-form-field>
+    </div>
+    <div class="tableRow">
+        <app-button text="Add" color="primary" (buttonClick)="addEntity()"></app-button>
+      </div>
+  </div>
+</form>
