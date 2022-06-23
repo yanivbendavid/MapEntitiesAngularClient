@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MapEntitiesComponent } from './map-entities.component';
+import { MissionMapComponent } from './mission-map.component';
 
-describe('MapEntitiesComponent', () => {
-  let component: MapEntitiesComponent;
-  let fixture: ComponentFixture<MapEntitiesComponent>;
+describe('MissionMapComponent', () => {
+  let component: MissionMapComponent;
+  let fixture: ComponentFixture<MissionMapComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MapEntitiesComponent ]
+      declarations: [ MissionMapComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(MapEntitiesComponent);
+    fixture = TestBed.createComponent(MissionMapComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

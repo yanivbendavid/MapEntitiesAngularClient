@@ -1,1 +1,39 @@
-<app-map-view></app-map-view>
+<div style="display: table">
+    <div style="margin: 20px; display: table-cell">
+      <a
+        routerLink="/"
+        style="
+          padding: 16px;
+          background: #e9e9e9;
+          color: #006699;
+          border-radius: 6px;
+        "
+        >Map Entity</a
+      >
+    </div>
+    <div style="margin: 20px; display: flex">
+      <a
+        routerLink="/entities"
+        style="
+          padding: 16px;
+          background: #e9e9e9;
+          color: #006699;
+          border-radius: 6px;
+        "
+        >Entities</a
+      >
+    </div>
+    <div style="margin: 20px; display: table-cell;">
+      <a
+        routerLink="/missionmap"
+        style="
+          padding: 16px;
+          background: #e9e9e9;
+          color: #006699;
+          border-radius: 6px;
+        "
+        >Mission Map</a
+      >
+    </div>
+  </div>
+<router-outlet></router-outlet>

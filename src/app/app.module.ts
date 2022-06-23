@@ -7,22 +7,43 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatInputModule } from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
+import { MatChipsModule } from '@angular/material/chips';
 
 import { MapViewComponent } from './map-view/map-view.component';
 import { MapEntityComponent } from './map-entity/map-entity.component';
 import { ButtonComponent } from './button/button.component';
 import { MapEntitiesComponent } from './map-entities/map-entities.component';
+import { MapEntityItemComponent } from './map-entity-item/map-entity-item.component';
+import { RouterModule, Routes } from '@angular/router';
+import { MissionMapComponent } from './mission-map/mission-map.component';
+import { mapEntities } from './mock-mapEntities';
+
+const appRoutes: Routes = [
+  { path: '', component: MapEntityComponent },
+  { path: 'entities', component: MapEntitiesComponent },
+  { path: 'missionmap', component: MissionMapComponent },
+];
 
 @NgModule({
-  declarations: [AppComponent, MapViewComponent, MapEntityComponent, ButtonComponent, MapEntitiesComponent],
+  declarations: [
+    AppComponent,
+    MapViewComponent,
+    MapEntityComponent,
+    ButtonComponent,
+    MapEntitiesComponent,
+    MapEntityItemComponent,
+    MissionMapComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatTabsModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatChipsModule,
+    RouterModule.forRoot(appRoutes, { enableTracing: true }),
   ],
   providers: [],
   bootstrap: [AppComponent],
