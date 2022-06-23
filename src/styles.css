@@ -2,7 +2,6 @@
 
 html,
 body {
-  height: 100%;
   margin: 20px;
 }
 body {
@@ -10,10 +9,10 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-.tableRow{
+.tableRow {
   display: table-row;
 }
 
-.tableCell{
+.tableCell {
   display: table-cell;
 }

@@ -18,10 +18,12 @@ import { MapEntityItemComponent } from './map-entity-item/map-entity-item.compon
 import { RouterModule, Routes } from '@angular/router';
 import { MissionMapComponent } from './mission-map/mission-map.component';
 import { mapEntities } from './mock-mapEntities';
+import { MenuItemComponent } from './menu-item/menu-item.component';
+import { MenuItemsComponent } from './menu-items/menu-items.component';
 
 const appRoutes: Routes = [
   { path: '', component: MapEntityComponent },
-  { path: 'entities', component: MapEntitiesComponent },
+  { path: 'repository', component: MapEntitiesComponent },
   { path: 'missionmap', component: MissionMapComponent },
 ];
 
@@ -34,6 +36,8 @@ const appRoutes: Routes = [
     MapEntitiesComponent,
     MapEntityItemComponent,
     MissionMapComponent,
+    MenuItemComponent,
+    MenuItemsComponent,
   ],
   imports: [
     BrowserModule,
