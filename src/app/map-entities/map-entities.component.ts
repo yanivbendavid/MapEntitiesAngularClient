@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MapEntity } from '../MapEntity';
-import { mapEntities } from '../mock-mapEntities';
+import { MapEntityService } from '../services/map-entity.service';
 
 @Component({
   selector: 'app-map-entities',
@@ -8,9 +7,18 @@ import { mapEntities } from '../mock-mapEntities';
   styleUrls: ['./map-entities.component.css'],
 })
 export class MapEntitiesComponent implements OnInit {
-  entities: MapEntity[] = mapEntities;
+  maps: string[] = [];
 
-  constructor() {}
+  constructor(private mapEntityService: MapEntityService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.mapEntityService.getMapEntities().subscribe((ent) => {
+      this.maps = ent.mapsNames;
+      console.log(
+        `${
+          this.maps.length
+        } map entities loaded at ${new Date().toLocaleTimeString()}`
+      );
+    });
+  }
 }

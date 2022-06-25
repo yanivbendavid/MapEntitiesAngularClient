@@ -1,5 +1,5 @@
 export interface MapEntity {
-  name: string;
-  lat: number;
-  lon: number;
+  success: boolean;
+  mapsNames: string[];
+  errorMessage: string;
 }

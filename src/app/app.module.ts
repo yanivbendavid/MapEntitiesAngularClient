@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
 
+//import { mapEntities } from './mock-mapEntities';
 import { MapViewComponent } from './map-view/map-view.component';
 import { MapEntityComponent } from './map-entity/map-entity.component';
 import { ButtonComponent } from './button/button.component';
@@ -17,7 +19,6 @@ import { MapEntitiesComponent } from './map-entities/map-entities.component';
 import { MapEntityItemComponent } from './map-entity-item/map-entity-item.component';
 import { RouterModule, Routes } from '@angular/router';
 import { MissionMapComponent } from './mission-map/mission-map.component';
-import { mapEntities } from './mock-mapEntities';
 import { MenuItemComponent } from './menu-item/menu-item.component';
 import { MenuItemsComponent } from './menu-items/menu-items.component';
 
@@ -47,7 +48,8 @@ const appRoutes: Routes = [
     MatInputModule,
     MatButtonModule,
     MatChipsModule,
-    RouterModule.forRoot(appRoutes, { enableTracing: true }),
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes, { enableTracing: false }),
   ],
   providers: [],
   bootstrap: [AppComponent],
