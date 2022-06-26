@@ -1,6 +1,33 @@
-<div style="margin-top: 30px;">
-<app-map-entity-item
-  *ngFor="let map of maps"
-  [mapEntity]="map"
-></app-map-entity-item>
-</div>
+<table style="margin-top: 30px">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top">
+        <app-map-entity-item
+          *ngFor="let map of maps"
+          [mapEntity]="map"
+          (onSelectMap)="selectMap(map)"
+        ></app-map-entity-item>
+      </td>
+      <td>
+        <img
+          [src]="imagePath"
+          *ngIf="imageIsVisible"
+          style="
+            padding: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            background-color: #fbfbfb;
+            width: auto;
+            border-radius: 6px;
+            margin: 10px;
+            margin-left: 0px;
+            line-height: 20px;
+            border: solid 1px #e6e6e6;
+            max-width: 1000px;
+            max-height: 1000px;
+          "
+        />
+      </td>
+    </tr>
+  </tbody>
+</table>

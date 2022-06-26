@@ -9,8 +9,4 @@ export const menuItems: MenuItem[] = [
     text: 'Map Repository',
     url: '/repository',
   },
-  {
-    text: 'Mission Map',
-    url: '/missionmap',
-  },
 ];

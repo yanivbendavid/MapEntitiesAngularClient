@@ -38,7 +38,7 @@ const appRoutes: Routes = [
     MapEntityItemComponent,
     MissionMapComponent,
     MenuItemComponent,
-    MenuItemsComponent,
+    MenuItemsComponent
   ],
   imports: [
     BrowserModule,
