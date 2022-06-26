@@ -11,6 +11,6 @@ export class MapEntityComponent implements OnInit {
   ngOnInit(): void {}
 
   addEntity() {
-    console.log('entity added');
+    
   }
 }
