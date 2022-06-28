@@ -1,2 +1,6 @@
-<app-menu-items></app-menu-items>
+<nav mat-tab-nav-bar>
+  <a mat-tab-link *ngFor="let link of navLinks" [routerLink]="link.url"
+    >{{ link.text }}
+  </a>
+</nav>
 <router-outlet></router-outlet>

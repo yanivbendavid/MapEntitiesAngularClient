@@ -1,5 +1,5 @@
 <form>
-  <div style="display: table; margin-top: 10px;">
+  <div class="mainTable">
     <div class="tableRow">
       <mat-form-field class="example-form-field">
         <input matInput type="text" placeholder="Name:" autocomplete="off" />
@@ -16,7 +16,7 @@
       </mat-form-field>
     </div>
     <div style="margin-top:10px ;text-align: right ;">
-        <app-button text="Add" color="primary" (buttonClick)="addEntity()"></app-button>
+      <button mat-raised-button color="primary" (click)="addEntity()">Add</button>
       </div>
   </div>
 </form>

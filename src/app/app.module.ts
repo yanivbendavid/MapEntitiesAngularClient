@@ -10,35 +10,22 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
+import {MatListModule} from '@angular/material/list';
 
-//import { mapEntities } from './mock-mapEntities';
-import { MapViewComponent } from './map-view/map-view.component';
 import { MapEntityComponent } from './map-entity/map-entity.component';
-import { ButtonComponent } from './button/button.component';
-import { MapEntitiesComponent } from './map-entities/map-entities.component';
-import { MapEntityItemComponent } from './map-entity-item/map-entity-item.component';
 import { RouterModule, Routes } from '@angular/router';
-import { MissionMapComponent } from './mission-map/mission-map.component';
-import { MenuItemComponent } from './menu-item/menu-item.component';
-import { MenuItemsComponent } from './menu-items/menu-items.component';
+import { MapRepositoryComponent } from './map-repository/map-repository.component';
 
 const appRoutes: Routes = [
   { path: '', component: MapEntityComponent },
-  { path: 'repository', component: MapEntitiesComponent },
-  { path: 'missionmap', component: MissionMapComponent },
+  { path: 'repository', component: MapRepositoryComponent },
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    MapViewComponent,
     MapEntityComponent,
-    ButtonComponent,
-    MapEntitiesComponent,
-    MapEntityItemComponent,
-    MissionMapComponent,
-    MenuItemComponent,
-    MenuItemsComponent
+    MapRepositoryComponent
   ],
   imports: [
     BrowserModule,
@@ -49,6 +36,7 @@ const appRoutes: Routes = [
     MatButtonModule,
     MatChipsModule,
     HttpClientModule,
+    MatListModule,
     RouterModule.forRoot(appRoutes, { enableTracing: false }),
   ],
   providers: [],

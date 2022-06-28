@@ -12,5 +12,6 @@ export class MapEntityComponent implements OnInit {
 
   addEntity() {
     console.log('entity added');
+    return false;
   }
 }

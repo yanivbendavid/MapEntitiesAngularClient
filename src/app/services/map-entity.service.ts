@@ -20,4 +20,9 @@ export class MapEntityService {
     const mapDtoUrl: string = `${this.mapsEntityApiUrl}/${mapName}`;
     return this.http.get<MapDto>(mapDtoUrl);
   }
+
+  setMissionMap(mapName:string){
+    const missionMapUrl: string = `${this.mapsEntityApiUrl}/missionmap/${mapName}`;
+    this.http.get(missionMapUrl);
+  }
 }
